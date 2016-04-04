@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Fire-Dragon-DoL"]
   spec.email         = ["francesco.belladonna@gmail.com"]
 
-  spec.summary       = %q{Simple HTTP server which allows transpiling HAML files}
-  spec.description   = %q{Simple HTTP server which allows transpiling HAML files through HTTP request}
-  spec.homepage      = "https://github.com/Carburetor/haml-transpiler-server"
+  spec.summary       = %q{Simple HTTP server which allows transpiling HAML files using Ruby implementation}
+  spec.description   = %q{Simple HTTP server which allows transpiling HAML files through HTTP request using Ruby implementation}
+  spec.homepage      = "https://github.com/Fire-Dragon-DoL/haml-transpiler-server"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
