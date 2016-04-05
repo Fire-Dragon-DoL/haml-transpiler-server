@@ -1,4 +1,4 @@
-# HamlTranspilerServer
+# haml-transpiler-server
 
 Simple HTTP server which allows transpiling HAML files through HTTP request
 
