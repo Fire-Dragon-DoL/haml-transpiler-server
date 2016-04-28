@@ -7,10 +7,13 @@ module HamlTranspilerServer
     use Rack::Logger
 
     configure do
-      set :server, :puma
-      set :port,   (ENV["HAMLTS_PORT"] || 5487).to_i
-      set :bind,   ENV["HAMLTS_BIND"] || "0.0.0.0"
-      set :lock,   false
+      set :server,  :puma
+      set :port,    (ENV["HAMLTS_PORT"] || 5487).to_i
+      set :bind,    ENV["HAMLTS_BIND"] || "0.0.0.0"
+      set :lock,    false
+      pidfile = {}
+      pidfile.merge!(pidfile: ENV["HAMLTS_PIDFILE"]) if ENV["HAMLTS_PIDFILE"]
+      set :server_settings, {}.merge(pidfile)
     end
 
     post "/path" do
