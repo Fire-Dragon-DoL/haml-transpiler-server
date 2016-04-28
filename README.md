@@ -47,6 +47,8 @@ variable.
 By default, the server binds to `0.0.0.0`, but you can change it by setting
 `HAMLTS_BIND` env variable.
 
+`HAMLTS_PIDFILE` can be used to configure pidfile location.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
