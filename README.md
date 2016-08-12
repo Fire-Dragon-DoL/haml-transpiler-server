@@ -32,7 +32,11 @@ Usage is simple:
 It will start an HTTP server on port 5487.
 
 Performing an HTTP POST request to `/content` with `content` param set to a
-valid HAML string will return the HTML version of it in the body.
+valid HAML string will return the HTML version of it in the body. For example:
+
+    curl -X POST -F 'content=%div hello world' 'http://127.0.0.1:5487/content'
+
+Will output `<div>hello world</div>`.
 
 Performing an HTTP POST request to `/path` with `path` param set to a _full_
 file path with where the server is hosted will return the HTML version of the
