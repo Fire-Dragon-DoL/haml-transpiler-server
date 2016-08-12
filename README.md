@@ -8,6 +8,10 @@ Add this line to your application's Gemfile:
 
 ```ruby
 gem 'haml-transpiler-server'
+# And one of the followings
+gem 'puma'
+gem 'thin'
+gem 'webrick'
 ```
 
 And then execute:
@@ -17,6 +21,7 @@ And then execute:
 Or install it yourself as:
 
     $ gem install haml-transpiler-server
+    $ gem install thin # or puma or webrick
 
 ## Usage
 
@@ -48,6 +53,9 @@ By default, the server binds to `0.0.0.0`, but you can change it by setting
 `HAMLTS_BIND` env variable.
 
 `HAMLTS_PIDFILE` can be used to configure pidfile location.
+
+`HAMLTS_SERVER` can be used to configure which server to use. By default it
+tries in sequence `puma`, `thin` and `webrick`.
 
 ## Development
 

@@ -7,7 +7,7 @@ module HamlTranspilerServer
     use Rack::Logger
 
     configure do
-      set :server,  :puma
+      set :server,  (ENV["HAMLTS_SERVER"] || [:puma, :thin, :webrick])
       set :port,    (ENV["HAMLTS_PORT"] || 5487).to_i
       set :bind,    ENV["HAMLTS_BIND"] || "0.0.0.0"
       set :lock,    false
