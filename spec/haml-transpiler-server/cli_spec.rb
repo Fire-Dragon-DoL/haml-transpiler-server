@@ -2,6 +2,16 @@ require "spec_helper"
 require "haml-transpiler-server/cli"
 
 describe HamlTranspilerServer::CLI, type: :request do
+  describe "/test" do
+    subject { last_response.status }
+
+    it "is 204" do
+      get "/test"
+
+      is_expected.to eq 204
+    end
+  end
+
   describe "/content" do
     context "with valid request" do
       subject { last_response.body }
