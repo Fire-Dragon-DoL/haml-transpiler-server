@@ -16,6 +16,10 @@ module HamlTranspilerServer
       set :server_settings, {}.merge(pidfile)
     end
 
+    get "/test" do
+      204
+    end
+
     post "/path" do
       render_path(params[:path])
     end

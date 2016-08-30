@@ -45,6 +45,11 @@ content of the file, if it's valid HAML.
 If any error is raised, a generic `500` code is reported, with error message
 and backtrace as body.
 
+You can also test if the server is running by checking if the `/test` endpoint
+is reachable:
+
+    curl 'http://127.0.0.1:5487/test'
+
 ## Configuration
 
 The gem starts in development/production/test based on `RACK_ENV` environment
